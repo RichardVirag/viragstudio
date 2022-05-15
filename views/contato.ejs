@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <section class="common-topo">
+        <div class="container">
+            <h1>
+                Estamos ansiosos para construir <strong>algo incrível</strong> juntos!
+            </h1>
+        </div>
+    </section>
+    <section class="container">
+        <div class="space-btw">
+            <div class="form-content">
+                <form action="">
+                    <div class="input-content">
+                        <label for="name">Qual o seu nome?</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="input-content">
+                        <label for="company">Qual o nome da sua empresa?</label>
+                        <input type="text" id="company">
+                    </div>
+                    <div class="half-inputs d-flex">
+                        <div class="input-content">
+                            <label for="email">Qual o seu e-mail?</label>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="input-content">
+                            <label for="phone">Qual o seu telefone?</label>
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+                    <div class="input-content">
+                        <label for="message">Conte-nos sobre o seu projeto ou faça alguma pergunta!</label>
+                        <textarea id="message" rows="8"></textarea>
+                    </div>
+                    <button class="g-recaptcha btn btn-default" 
+                        data-sitekey="6Lcf5FUfAAAAAJXaYPJ-3IZH1pL3FsIvP6OQL4X9" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>
+                        Enviar <i class="fa fa-chevron-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="contact-content">
+                <p class="subtitle">
+                    Telefone<br>
+                    <a href="tel:0151143308528">(11) 4330-8528</a><br><br>
+                    Whatsapp<br>
+                    <a href="https://wa.me/5511995701084">(11) 99570-1085</a><br><br>
+                    E-mail<br>
+                    <a href="mailto:falecom@viragstudio.com.br">
+                        falecom@viragstudio.com.br
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

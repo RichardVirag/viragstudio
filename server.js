@@ -9,17 +9,29 @@ server.listen(port)
 server.use(express.static('assets'))
 
 server.get('/', (req, res) => {
-    res.render('index', { title: 'Home' })
+    res.render('index', {
+        title: 'Além do desenvolvimento, uma experiência em design',
+        headerWhite: true
+    })
 })
 
-server.get('/about', (req, res) => {
-    res.render('about', { title: 'About' })
+server.get('/sobre', (req, res) => {
+    res.render('sobre', {
+        title: 'Um pouco da nossa trajetória',
+        headerWhite: false
+    })
 })
 
-server.get('/contact', (req, res) => {
-    res.render('contact', { title: 'Contact' })
+server.get('/contato', (req, res) => {
+    res.render('contato', {
+        title: 'Tire suas dúvidas ou fale com a gente!',
+        headerWhite: false
+    })
 })
 
 server.use((req, res) => {
-    res.status(404).render('404', { title: '404' })
+    res.status(404).render('404', {
+        title: '404',
+        headerWhite: false
+    })
 })
