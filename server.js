@@ -17,8 +17,15 @@ server.get('/', (req, res) => {
 
 server.get('/sobre', (req, res) => {
     res.render('sobre', {
-        title: 'Um pouco da nossa trajetória',
+        title: 'Projetando e conectando ideias é a nossa essência',
         headerWhite: false
+    })
+})
+
+server.get('/servicos', (req, res) => {
+    res.render('servicos', {
+        title: 'A melhor solução pra você',
+        headerWhite: true
     })
 })
 

@@ -166,13 +166,25 @@ label {
   margin-bottom: 6vh;
 }
 
-.common-topo h1 {
+.dark-topo {
+  background: #20202f;
+  padding-top: calc(100px + 7vh);
+  padding-bottom: 6vh;
+}
+
+.common-topo h1,
+.dark-topo h1 {
   font-size: 70px;
   line-height: 110%;
   width: 51%;
 }
 
-.common-topo h1 strong {
+.dark-topo h1 {
+  color: #fff;
+}
+
+.common-topo h1 strong,
+.dark-topo h1 strong {
   color: #ff7A4d;
 }
 
@@ -493,12 +505,19 @@ footer .cut-triangle {
   fill: #20202f;
 }
 
-.cls-1{
-  fill:none;
-  stroke:#20202f;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-width:2px;
+.cls-1 {
+  fill: none;
+  stroke: #20202f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+.cls-2 {
+  fill: none;
+  stroke: #20202f;
+  stroke-linecap: round;
+  stroke-width: 2px;
 }
 
 .service-content > h3 {
@@ -575,11 +594,10 @@ footer .cut-triangle {
   margin-left: auto;
 }
 
-.img-content-2 {
+.img-focus {
   width: 550px;
-  height: 400px;
-  background: #9797a6;
-  margin-bottom: 15px;
+  border-top-left-radius: 150px;
+  border-bottom-right-radius: 150px;
 }
 
 .clients-index-content h2 {
@@ -633,6 +651,10 @@ footer .cut-triangle {
 
 /* Contato */
 
+.container-contact {
+  padding-top: 0;
+}
+
 .form-content {
   width: 50%;
 }
@@ -660,6 +682,39 @@ footer .cut-triangle {
 
 .contact-content a:hover {
   color: #ff7A4d;
+  transition: .4s ease-in-out;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 6vh;
+}
+
+.social-list a {
+  display: flex;
+}
+
+.social-list i {
+  font-size: 26px;
+  margin-right: 10px;
+  color: #20202f;
+}
+
+.social-list a:hover i {
+  color: #ff7A4d;
+  transition: .4s ease-in-out;
+}
+
+.social-list span {
+  font-family: 'Myriad Pro Regular';
+  color: #9797a6;
+  font-size: 24px;
+}
+
+.social-list a:hover span {
+  color: #20202f;
   transition: .4s ease-in-out;
 }
 
@@ -721,14 +776,6 @@ footer .cut-triangle {
   line-height: 23px;
 }
 
-.cls-1{
-  fill:none;
-  stroke:#20202f;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-width:2px;
-}
-
 .about-advantages-item {
   display: flex;
   align-items: flex-start;
@@ -757,3 +804,104 @@ footer .cut-triangle {
   display: block;
   width: 100%;
 }
+
+/* Serviços */
+
+.common-topo.service {
+  background: #ff7A4d;
+  padding-top: calc(100px + 7vh);
+  padding-bottom: 6vh;
+  margin: 0;
+}
+
+.services {
+  background: #20202f;;
+}
+
+.services .cut-triangle {
+  display: flex;
+  fill: #fff;
+}
+
+.item-service {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 4vh 0;
+}
+
+.item-service:hover {
+  background: #ff7a4d;
+  transition: .4s ease-in-out;
+}
+
+.item-service.border-btn {
+  margin-bottom: 0;
+  border-bottom: 1px solid #3a3a4e;
+}
+
+.item-service h3 {
+  color: #fff;
+  margin-bottom: 7px;
+  font-size: 40px;
+}
+
+.item-service p {
+  font-family: 'Myriad Pro Light';
+  color: #fff;
+  font-size: 26px;
+}
+
+.item-service .container {
+  position: relative;
+}
+
+.item-service i {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-title {
+  width: 34%;
+}
+
+.faq-title h2 strong {
+  color: #ff7a4d;
+}
+
+.faq-content {
+  width: calc(66% - 70px);
+}
+
+.faq-content svg,
+.faq-content p {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.faq-content svg {
+  width: 35px;
+  margin: 0 25px 25px 0;
+}
+
+.faq-content p {
+  width: calc(100% - 64px);
+  line-height: 140%;
+}
+
+.faq-content p strong {
+  font-family: 'Myriad Pro Bold';
+  font-size: 18px;
+}
+
+.faq-content li {
+  margin-bottom: 30px;
+}
+
+.faq-content li:last-child {
+  margin-bottom: 0;
+}
+
