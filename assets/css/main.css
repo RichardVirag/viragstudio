@@ -905,3 +905,29 @@ footer .cut-triangle {
   margin-bottom: 0;
 }
 
+/* Portfolio */
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.img-portf {
+  width: 100%;
+  background: #9797a6;
+  height: 226px;
+}
+
+.portfolio-content a span {
+  font-family: 'Myriad Pro Light';
+  color: #9797a6;
+  font-size: 19px;
+  margin-top: 10px;
+  display: block;
+}
+
+.portfolio-content a:hover span {
+  text-decoration: underline;
+}
+

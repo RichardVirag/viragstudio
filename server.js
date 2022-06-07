@@ -15,6 +15,13 @@ server.get('/', (req, res) => {
     })
 })
 
+server.get('/portfolio', (req, res) => {
+    res.render('portfolio', {
+        title: 'Personalizado de ponta a ponta em cada projeto',
+        headerWhite: false
+    })
+})
+
 server.get('/sobre', (req, res) => {
     res.render('sobre', {
         title: 'Projetando e conectando ideias é a nossa essência',
