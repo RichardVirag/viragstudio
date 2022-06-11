@@ -1,7 +1,7 @@
 const express = require('express')
 const { append } = require('express/lib/response')
 
-const server = express()
+const server = express(),
     port = process.env.PORT || 5000
 
 server.set('view engine', 'ejs')
@@ -9,6 +9,13 @@ server.listen(port)
 server.use(express.static('assets'))
 
 server.get('/', (req, res) => {
+    res.render('coming-soon', {
+        title: 'Ima nova ViragStudio',
+        headerWhite: true
+    })
+})
+
+server.get('/home', (req, res) => {
     res.render('index', {
         title: 'Além do desenvolvimento, uma experiência em design',
         headerWhite: true

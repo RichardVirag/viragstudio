@@ -1,3 +1,112 @@
+/* 
+ * coming-soon
+ */
+
+.coming-soon {
+  background: #20202f;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1.5fr;
+}
+
+.coming-soon div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-coming {
+  height: 20px;
+}
+
+.logo-coming svg {
+  fill: #fff;
+  height: 20px;
+}
+
+.logo-coming svg .icon {
+  fill: #ff7A4d;
+}
+
+.coming-soon div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-coming-content {
+  display: block !important;
+  text-align: center;
+}
+
+.title-coming-content h1 {
+  font-size: 90px;
+  color: #FFF;
+}
+
+.title-coming-content h1 strong {
+  color: #ff7A4d;
+}
+
+.title-coming-content span {
+  font-family: "Myriad Pro Light";
+  font-size: 50px;
+  color: #FFF;
+}
+
+.coming-soon div:nth-child(3) {
+  text-align: center;
+}
+
+.footer-coming-content {
+  display: block !important;
+}
+
+.footer-coming-content span {
+  font-family: "Myriad Pro Light";
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.footer-coming-content p a {
+  font-family: "Myriad Pro Semibold";
+  font-size: 18px;
+  color: #FFF;
+  line-height: 150%;
+}
+
+.footer-coming-content p a:hover {
+  color: #ff7A4d;
+  transition: .4s ease-in-out;
+}
+
+@media screen and (max-width: 1375px) {
+  .title-coming-content h1 {
+    font-size: 70px;
+    color: #FFF;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .coming-soon {
+    padding: 0 15px;
+  }
+  .title-coming-content h1 {
+    font-size: 50px;
+  }
+  .title-coming-content span {
+    font-size: 30px;
+  }
+}
+
+/* 
+ * coming-soon
+ */
+
 /* Fontes */
 
 @font-face {
