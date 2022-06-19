@@ -50,6 +50,13 @@ server.get('/contato', (req, res) => {
     })
 })
 
+server.get('/orcamento', (req, res) => {
+    res.render('orcamento', {
+        title: 'Vamos criar algo incrível jusnto!',
+        headerWhite: false
+    })
+})
+
 server.use((req, res) => {
     res.status(404).render('404', {
         title: '404',

@@ -183,6 +183,10 @@ label {
   margin-bottom: 15px;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 /* Common */
 
 .btn {
@@ -331,7 +335,8 @@ label {
 @media screen and (min-width: 1600px) {
   .container {
     width: 1500px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1050,3 +1055,44 @@ footer .cut-triangle {
   text-decoration: underline;
 }
 
+/* Orçamento */
+
+.orcamento {
+  padding-top: calc(100px + 7vh);
+}
+
+.orcamento h1 {
+  font-size: 70px;
+  line-height: 110%;
+  width: 51%;
+  margin-bottom: 6vh;
+}
+
+.orcamento p {
+  font-size: 20px;
+  line-height: 120%;
+  color: #9797a6;
+}
+
+.orcamento-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 1;
+}
+
+.typewrite {
+  display: none;
+}
+
+.typewrite span {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
