@@ -239,7 +239,7 @@ label {
 
 @media screen and (max-width: 1599px) {
   .container {
-    width: auto;
+    width: 100%;
   }
 }
 
