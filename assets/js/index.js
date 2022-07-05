@@ -17,8 +17,6 @@ const mouse = {
 
 class Particle {
     constructor() {
-        // this.x = mouse.x;
-        // this.y = mouse.y;
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 8 + 1;
@@ -77,7 +75,7 @@ function loop() {
     setTimeout(function () {
         particlesArray.push(new Particle());
         loop()
-    }, 5); 
+    }, 15); 
 };
 loop();
 

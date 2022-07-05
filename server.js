@@ -9,13 +9,6 @@ server.listen(port)
 server.use(express.static('assets'))
 
 server.get('/', (req, res) => {
-    res.render('coming-soon', {
-        title: 'Ima nova ViragStudio',
-        headerWhite: true
-    })
-})
-
-server.get('/home', (req, res) => {
     res.render('index', {
         title: 'Além do desenvolvimento, uma experiência em design',
         headerWhite: true

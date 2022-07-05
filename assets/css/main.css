@@ -1,112 +1,3 @@
-/* 
- * coming-soon
- */
-
-.coming-soon {
-  background: #20202f;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 3fr 1.5fr;
-}
-
-.coming-soon div:nth-child(1) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-coming {
-  height: 20px;
-}
-
-.logo-coming svg {
-  fill: #fff;
-  height: 20px;
-}
-
-.logo-coming svg .icon {
-  fill: #ff7A4d;
-}
-
-.coming-soon div:nth-child(2) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-coming-content {
-  display: block !important;
-  text-align: center;
-}
-
-.title-coming-content h1 {
-  font-size: 90px;
-  color: #FFF;
-}
-
-.title-coming-content h1 strong {
-  color: #ff7A4d;
-}
-
-.title-coming-content span {
-  font-family: "Myriad Pro Light";
-  font-size: 50px;
-  color: #FFF;
-}
-
-.coming-soon div:nth-child(3) {
-  text-align: center;
-}
-
-.footer-coming-content {
-  display: block !important;
-}
-
-.footer-coming-content span {
-  font-family: "Myriad Pro Light";
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #FFF;
-  margin-bottom: 14px;
-  display: block;
-}
-
-.footer-coming-content p a {
-  font-family: "Myriad Pro Semibold";
-  font-size: 18px;
-  color: #FFF;
-  line-height: 150%;
-}
-
-.footer-coming-content p a:hover {
-  color: #ff7A4d;
-  transition: .4s ease-in-out;
-}
-
-@media screen and (max-width: 1375px) {
-  .title-coming-content h1 {
-    font-size: 70px;
-    color: #FFF;
-  }
-}
-
-@media screen and (max-width: 1040px) {
-  .coming-soon {
-    padding: 0 15px;
-  }
-  .title-coming-content h1 {
-    font-size: 50px;
-  }
-  .title-coming-content span {
-    font-size: 30px;
-  }
-}
-
-/* 
- * coming-soon
- */
-
 /* Fontes */
 
 @font-face {
@@ -183,16 +74,18 @@ label {
   margin-bottom: 15px;
 }
 
-.mt-30 {
-  margin-top: 30px;
+.mt-40 {
+  margin-top: 40px;
 }
 
 /* Common */
 
 .btn {
   font-family: "Myriad Pro Semibold";
-  padding: 10px 16px;
+  padding: 15px 20px;
   display: table;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 .btn-default {
@@ -202,7 +95,7 @@ label {
 }
 
 .btn-default:hover {
-  background: #ce623f;
+  background: #ff875f;
   transition: .4s ease-in-out;
 }
 
@@ -221,7 +114,7 @@ label {
 .subtitle {
   line-height: 120%;
   font-size: 18px;
-  color: #9797a6;
+  color: #ccc;
   margin-bottom: 4vh;
 }
 
@@ -328,6 +221,10 @@ label {
 
 .half-inputs .input-content:last-child {
   margin-left: 13px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Media */
@@ -976,16 +873,13 @@ footer .cut-triangle {
 }
 
 .item-service .container {
-  position: relative;
+  align-items: center;
 }
 
 .item-service i {
   font-size: 30px;
   color: #fff;
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
+  vertical-align: middle;
 }
 
 .faq-title {
@@ -1059,6 +953,7 @@ footer .cut-triangle {
 
 .orcamento {
   padding-top: calc(100px + 7vh);
+  min-height: calc(100vh - 219.88px);
 }
 
 .orcamento h1 {
@@ -1074,21 +969,101 @@ footer .cut-triangle {
   color: #9797a6;
 }
 
-.orcamento-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  max-width: 100%;
-  z-index: 1;
+.orcamento p b {
+  font-family: 'Myriad Pro Bold';
+}
+
+.orcamento .btn {
+  margin-top: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.orcamento .btn:hover {
+  cursor: pointer;
+}
+
+.orcamento .enter-indicator {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 25px;
+  margin-left: 5px;
+  font-family: 'Myriad Pro Regular';
+  color: #20202f;
+  font-size: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e6e6ed;
+  border-radius: 8px;
+  margin-top: -66px;
+}
+
+#progress {
+  width: 0%;
+  height: 8px;
+  background: #ff7A4d;
+  border-radius: 8px;
+  transition: width 1s;
+}
+
+.step {
+  margin-top: 60px;
 }
 
 .typewrite {
   display: none;
 }
 
+.orcamento p.typewrite {
+  font-size: 22px;
+  line-height: 140%;
+  color: #9797a6;
+}
+
+.label {
+  font-family: 'Myriad Pro Bold';
+}
+
+.label i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.typewrite input {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #9797a6;
+  width: 51%;
+  font-family: 'Myriad Pro Regular';
+  color: #20202f;
+  font-size: 28px;
+  padding: 15px 0;
+  margin-top: 10px;
+}
+
+.typewrite input:focus {
+  outline: none;
+}
+
+.typewrite input::-webkit-input-placeholder,
+.typewrite input:-ms-input-placeholder {
+  color: #aeaebb;
+}
+.typewrite input:-moz-placeholder,
+.typewrite input::-moz-placeholder {
+  color: #aeaebb;
+  opacity: 1;
+}
+
 .typewrite span {
   animation: blinker 1s linear infinite;
+}
+
+.typewrite span.enter-indicator {
+  animation: none;
 }
 
 @keyframes blinker {
