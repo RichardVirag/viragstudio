@@ -53,6 +53,6 @@ server.get('/orcamento', (req, res) => {
 server.use((req, res) => {
     res.status(404).render('404', {
         title: '404',
-        headerWhite: false
+        headerWhite: true
     })
 })
