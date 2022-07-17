@@ -132,37 +132,9 @@ function finishEmail() {
 function goToStep5() {
     currentStep++;
     document.getElementById('step4').classList.add("hidden");
-    // document.getElementById('step4').classList.remove("hidden");
+    document.getElementById('step5').classList.remove("hidden");
     setTimeout(() => {
         document.getElementById('progress').style.width = '65%';
     });
-}
-
-/* function inputEnter(el) {
-    el.addEventListener('keyup', function(e) {
-        if ((e.which || e.keyCode) == 13) {
-            switch (el.id) {
-                case 'name': {
-                    formDataObj = {
-                        ...formDataObj,
-                        name: el.value
-                    }
-                    
-                    textArray[6].text[0] =
-                        textArray[6].text[0].replace('_', el.value);
-
-                    nextInput();
-                    break;
-                }
-
-                default:
-                    break;
-            }
-        }
-    });
-}
-
-function nextInput() {
-    textPosition = 0;
     typing();
-} */
+}
