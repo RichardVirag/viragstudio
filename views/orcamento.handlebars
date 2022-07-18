@@ -1,0 +1,195 @@
+{{> nav parameter=headerWhite}}
+<div class="orcamento container">
+    <section id="step1">
+        <h1>Seu sucesso está mais próximo do que você imagina</h1>
+        <p>Vamos juntos iniciar a sua jornada?</p>
+        <p>Siga até as próximas etapas para descobrirmos as suas necessidades.</p>
+        <a class="btn btn-default"
+            onclick="goToStep2()">
+            Começar
+        </a>
+        <span class="enter-indicator">            
+            pressione ENTER ↵
+        </span>
+    </section>
+    <div id="steps"
+        class="hidden">
+        <div  class="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <section id="step2"
+            class="step">
+            <p class="typewrite">Olá, tudo bem?</p>
+            <p class="typewrite">
+                Muito prazer! Eu sou a inteligência virtual da ViragStudio...
+            </p>
+            <p class="typewrite">
+                Estou aqui para te guiar nas próximas etapas!
+            </p>
+            <p class="typewrite">
+                Desde já, fique sabendo que você prestes a embarcar em uma nova jornada de sucesso!
+            </p>
+            <p class="typewrite mt-40">
+                Mas primeiro, posso te conhecer um pouco mais?
+            </p>
+            <p class="typewrite label mt-40">
+                Fala pra mim qual é o seu nome? *
+            </p>
+            <div class="typewrite">
+                <input type="text"
+                    id="name"
+                    placeholder="Digite o seu nome aqui..">
+                <a class="btn btn-default"
+                    onclick="goToStep3()">
+                    <i class="fa fa-check"></i>
+                    Feito
+                </a>
+                <span class="enter-indicator">            
+                    pressione ENTER ↵
+                </span>
+            </div>
+        </section>
+        <section id="step3"
+            class="step hidden">
+            <p class="typewrite">
+                Seja bem-vindo(a) _!
+            </p>
+            <p class="typewrite">
+                Que incrível está sendo o nosso contato
+            </p>
+            <p class="typewrite">
+                Espero que você esteja tão animado quanto eu estou!
+            </p>
+            <p class="typewrite label mt-40">
+                Agora me fala também o nome da sua empresa ou do seu negócio? *
+            </p>
+            <div class="typewrite">
+                <input type="text"
+                    id="companyname"
+                    placeholder="Digite o nome da sua empresa ou seu  negócio aqui..">
+                <a class="btn btn-default"
+                    onclick="goToStep4()">
+                    <i class="fa fa-check"></i>
+                    Feito
+                </a>
+                <span class="enter-indicator">            
+                    pressione ENTER ↵
+                </span>
+            </div>
+        </section>
+        <section id="step4"
+            class="step hidden">
+            <p class="typewrite">
+                Só mais algumas informações para contato...
+            </p>
+            <p class="typewrite label mt-40">
+                Me passa também o seu e-mail? *
+            </p>
+            <div class="typewrite">
+                <input type="text"
+                    id="companyname"
+                    placeholder="Digite o e-mail aqui..">
+                <div id="btn-email">
+                    <a class="btn btn-default"
+                        onclick="finishEmail()">
+                        <i class="fa fa-check"></i>
+                        Feito
+                    </a>
+                    <span class="enter-indicator">            
+                        pressione ENTER ↵
+                    </span>
+                </div>
+            </div>
+            <div class="hidden"
+                id="phone">
+                <p class="typewrite label mt-40">
+                    E o seu telefone, preferencialmente WhatsApp? *
+                </p>
+                <div class="typewrite">
+                    <input type="text"
+                        id="phone"
+                        placeholder="Digite o telefone aqui..">
+                    <a class="btn btn-default"
+                        onclick="goToStep5()">
+                        <i class="fa fa-check"></i>
+                        Feito
+                    </a>
+                    <span class="enter-indicator">            
+                        pressione ENTER ↵
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section id="step5"
+            class="step hidden">
+            <p class="typewrite">
+                Ótimo! Chegou o momento de falarmos sobre o seu projeto
+            </p>
+            <p class="typewrite mt-40">
+                Você deve estar cheio de ideias
+            </p>
+            <p class="typewrite label mt-40">
+                Em poucas linhas, qual a sua necessidade? *
+            </p>
+            <div class="typewrite">
+                <input type="text"
+                    id="need"
+                    placeholder="Digite a sua necessidade de projeto aqui..">
+                <div id="btn-need">
+                    <a class="btn btn-default"
+                        onclick="finishNeed()">
+                        <i class="fa fa-check"></i>
+                        Feito
+                    </a>
+                    <span class="enter-indicator">            
+                        pressione ENTER ↵
+                    </span>
+                </div>
+            </div>
+            <div class="hidden"
+                id="companies">
+                <p class="typewrite label mt-40">
+                    Qual(is) empresa(s) te inspiram? *
+                </p>
+                <div class="typewrite">
+                    <input type="text"
+                        id="companies"
+                        placeholder="Digite aqui a(s) empresa(s) que te inspiram...">
+                    <div id="btn-companies">
+                        <a class="btn btn-default"
+                            onclick="goToStep6()">
+                            <i class="fa fa-check"></i>
+                            Feito
+                        </a>
+                        <span class="enter-indicator">            
+                            pressione ENTER ↵
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden"
+                id="companies">
+                <p class="typewrite label mt-40">
+                    Me conta também motivo da resposta anterior? *
+                </p>
+                <div class="typewrite">
+                    <input type="text"
+                        id="companies"
+                        placeholder="Digite o motivo aqui...">
+                    <div id="btn-companies">
+                        <a class="btn btn-default"
+                            onclick="finishCompanies()">
+                            <i class="fa fa-check"></i>
+                            Feito
+                        </a>
+                        <span class="enter-indicator">            
+                            pressione ENTER ↵
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{{> footer}}
+<script src="js/orcamento.js"></script>
