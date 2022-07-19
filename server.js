@@ -41,16 +41,32 @@ const path = require("path");
         });
     });
 
-    server.get("/orcamento", (req, res) => {
-        res.render("orcamento", {
-            title: "Vamos criar algo incrível jusnto!"
-        });
-    });
-
     server.get("/servicos", (req, res) => {
         res.render("servicos", {
             title: "A melhor solução pra você",
             headerClass: 'white-header'
+        });
+    });
+
+    server.get("/servicos/:tipo", (req, res) => {
+        switch (req.params.tipo) {
+            case "branding":
+                res.render("branding", {
+                    title: "A construção e gestão da marca da sua empresa",
+                    brandingActive: true
+                });
+            case "webdevelopment":
+                res.render("webdevelopment", {
+                    title: "Marque presença na web agora mesmo",
+                    webdevelopmentActive: true
+                });
+                break;
+        }
+    });
+
+    server.get("/orcamento", (req, res) => {
+        res.render("orcamento", {
+            title: "Vamos criar algo incrível jusnto!"
         });
     });
 

@@ -1,0 +1,73 @@
+{{#*inline "branding"}}
+    <a href="/servicos/branding" class="item-service border-btn">
+        <div class="container space-btw">
+            <div>
+                <h3>Branding</h3>
+                <p>Projete a história da sua marca</p>
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </a>
+{{/inline}}
+{{#*inline "webdevelopment"}}
+    <a href="/servicos/webdevelopment" class="item-service border-btn">
+        <div class="container space-btw">
+            <div>
+                <h3>WebDevelopment</h3>
+                <p>Visibilidade online com design personalizado</p>
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </a>
+{{/inline}}
+{{#*inline "sistemas"}}
+    <a href="#" class="item-service border-btn">
+        <div class="container space-btw">
+            <div>
+                <h3>Sistemas Web</h3>
+                <p>Interfaces funcionais que entregam valor</p>
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </a>
+{{/inline}}
+{{#*inline "strategy"}}
+    <a href="#" class="item-service">
+        <div class="container space-btw">
+            <div>
+                <h3>Digital Strategy</h3>
+                <p>Encontre a direção ideal para a sua jornada</p>
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </a>
+{{/inline}}
+
+<section class="services">
+    {{#if brandingActive}}
+        {{> webdevelopment}}
+        {{> sistemas}}
+        {{> strategy}}
+    {{else if webdevelopmentActive}}
+        {{> branding}}
+        {{> sistemas}}
+        {{> strategy}}
+    {{else if sistemasActive}}
+        {{> branding}}
+        {{> webdevelopment}}
+        {{> strategy}}
+    {{else if strategyActive}}
+        {{> branding}}
+        {{> webdevelopment}}
+        {{> sistemas}}
+    {{else}}
+        {{> branding}}
+        {{> webdevelopment}}
+        {{> sistemas}}
+        {{> strategy}}
+    {{/if}}
+    
+    <svg class="cut-triangle" preserveAspectRatio="none" viewBox="0 0 1440 192" xmlns="http://www.w3.org/2000/svg">
+        <path d="M837 138.335C1243.5 86.5938 1440 0 1440 0V192H0C0 192 430.5 190.077 837 138.335Z"></path>
+    </svg>
+</section>
