@@ -55,9 +55,21 @@ const path = require("path");
                     title: "A construção e gestão da marca da sua empresa",
                     brandingActive: true
                 });
-            case "webdevelopment":
+            case "web-development":
                 res.render("webdevelopment", {
                     title: "Marque presença na web agora mesmo",
+                    webdevelopmentActive: true
+                });
+                break;
+            case "sistemas-web":
+                res.render("sistemasweb", {
+                    title: "Funcionais e otimizados com a sua necessidade",
+                    webdevelopmentActive: true
+                });
+                break;
+            case "digital-strategy":
+                res.render("digitalstrategy", {
+                    title: "Alinhando propósito a estratégia certa",
                     webdevelopmentActive: true
                 });
                 break;
