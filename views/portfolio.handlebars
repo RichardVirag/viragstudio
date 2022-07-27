@@ -1,85 +1,290 @@
-{{> nav parameter=headerWhite}}
+{{> nav}}
 <section class="common-topo container">
     <h1>
         Nossos <strong>trabalhos</strong>
     </h1>
 </section>
-<section class="portfolio">
-    <div class="container">
-        <div class="portfolio-content">
+<section class="container">
+    <ul class="filter-portfolio">
+        <li>
+            <button type="button"
+                class="btn {{#if brandingActive}}{{else if webdevelopmentActive}}{{else if sistemasActive}}{{^}} active {{/if}}"
+                onclick="location.href='/portfolio';">
+                Tudo
+            </button>
+        </li>
+        <li>
+           <button type="button"
+                class="btn {{#if brandingActive}} active {{^}} {{/if}}"
+                onclick="location.href='/portfolio/branding';">
+                Branding
+            </button>
+        </li>
+        <li>
+            <button type="button"
+                class="btn {{#if webdevelopmentActive}} active {{^}} {{/if}}"
+                onclick="location.href='/portfolio/webdevelopment';">
+                Web Development
+            </button>
+        </li>
+        <li>
+            <button type="button"
+                class="btn {{#if sistemasActive}} active {{^}} {{/if}}"
+                onclick="location.href='/portfolio/sistemasweb';">
+                Sistemas Web
+            </button>
+        </li>
+    </ul>
+    {{#if brandingActive}}
+        <div class="portfolio-top">
             <a href="">
-                <div class="img-portf"></div>
-                <span>Lorem</span>
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
             </a>
             <a href="">
-                <div class="img-portf"></div>
-                <span>Ipsum</span>
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
             </a>
             <a href="">
-                <div class="img-portf"></div>
-                <span>Dolor</span>
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
             </a>
             <a href="">
-                <div class="img-portf"></div>
-                <span>Sit</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Amet</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Consectetur</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Adipisicing</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Elit</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Vero</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Quo</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Ducimus</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Enim</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Quibusdam</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Repellat</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Unde</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Non</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Totam</span>
-            </a>
-            <a href="">
-                <div class="img-portf"></div>
-                <span>Aperiam</span>
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
             </a>
         </div>
-    </div>
+        <div class="portfolio">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+    {{else if webdevelopmentActive}}
+        <div class="portfolio-top">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+        <div class="portfolio">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+    {{else if sistemasActive}}
+        <div class="portfolio-top">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+        <div class="portfolio">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+    {{else}}
+        <div class="portfolio-top">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+        <div class="portfolio">
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+            <a href="">
+                <img src="https://via.placeholder.com/900x700/9797a6/ffffff" alt="">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Ipsum</p>
+            </a>
+        </div>
+    {{/if}}
 </section>
 {{> footer}}

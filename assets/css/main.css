@@ -873,8 +873,9 @@ footer .cut-triangle {
 
 .item-service {
   display: flex;
-  margin-bottom: 30px;
   padding: 4vh 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #3a3a4e;
 }
 
 .item-service:hover {
@@ -882,9 +883,9 @@ footer .cut-triangle {
   transition: .4s ease-in-out;
 }
 
-.item-service.border-btn {
-  margin-bottom: 0;
-  border-bottom: 1px solid #3a3a4e;
+.item-service:last-child {
+  margin-bottom: 30px;
+  border-bottom: 0;
 }
 
 .item-service h3 {
@@ -1062,28 +1063,61 @@ footer .cut-triangle {
 
 /* Portfolio */
 
-.portfolio-content {
+.portfolio,
+.portfolio-top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 
-.img-portf {
-  width: 100%;
-  background: #9797a6;
-  height: 226px;
+.portfolio {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.portfolio-content a span {
-  font-family: 'Myriad Pro Light';
-  color: #9797a6;
-  font-size: 19px;
-  margin-top: 10px;
+.portfolio-top {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 40px;
+}
+
+.portfolio a,
+.portfolio-top a {
+  padding-bottom: 30px;
+}
+
+.portfolio a img,
+.portfolio-top a img {
+  max-width: 100%;
   display: block;
+  margin-bottom: 25px;
 }
 
-.portfolio-content a:hover span {
-  text-decoration: underline;
+.portfolio a p,
+.portfolio-top a p {
+  margin-top: 18px;
+  text-transform: uppercase;
+  color: #9797a6;
+}
+
+.filter-portfolio {
+  display: flex;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.filter-portfolio button {
+  border: 0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e8e8ec;
+  font-family: 'Myriad Pro Regular';
+}
+
+.filter-portfolio button:hover {
+  cursor: pointer;
+}
+
+.filter-portfolio button.active {
+  color: #fff;
 }
 
 /* Orçamento */

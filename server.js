@@ -14,6 +14,76 @@ const path = require("path");
         defaultLayout: 'main'
     }));
 
+// Funções e models
+
+    function renderPortfolio(res) {
+        res.render("portfolio", {
+            title: "Personalizado de ponta a ponta em cada projeto"
+        });
+    }
+    function renderPortfolioBranding(res) {
+        res.render("portfolio", {
+            title: "Personalizado de ponta a ponta em cada projeto",
+            brandingActive: true
+        });
+    }
+    function renderPortfolioWebDevelopment(res) {
+        res.render("portfolio", {
+            title: "Personalizado de ponta a ponta em cada projeto",
+            webdevelopmentActive: true
+        });
+    }
+    function renderPortfolioSistemasWeb(res) {
+        res.render("portfolio", {
+            title: "Personalizado de ponta a ponta em cada projeto",
+            sistemasActive: true
+        });
+    }
+
+    function renderServicos(res) {
+        res.render("servicos", {
+            title: "A melhor solução pra você",
+            headerClass: 'white-header'
+        });
+    }
+    function renderServicosBranding(res) {
+        res.render("branding", {
+            title: "A construção e gestão da marca da sua empresa",
+            brandingActive: true
+        });
+    }
+    function renderServicosWebDevelopment(res) {
+        res.render("webdevelopment", {
+            title: "Marque presença na web agora mesmo",
+            webdevelopmentActive: true
+        });
+    }
+    function renderServicosSistemasWeb(res) {
+        res.render("sistemasweb", {
+            title: "Funcionais e otimizados com a sua necessidade",
+            sistemasActive: true
+        });
+    }
+    function renderServicosDigitalStrategy(res) {
+        res.render("digitalstrategy", {
+            title: "Alinhando propósito a estratégia certa",
+            strategyActive: true
+        });
+    }
+
+    const tiposPortfolio = {
+        branding: renderPortfolioBranding,
+        webdevelopment: renderPortfolioWebDevelopment,
+        sistemasweb: renderPortfolioSistemasWeb
+    }
+
+    const tiposServicos = {
+        branding: renderServicosBranding,
+        webdevelopment: renderServicosWebDevelopment,
+        sistemasweb: renderServicosSistemasWeb,
+        digitalstrategy: renderServicosDigitalStrategy
+    }
+
 // Rotas
 
     server.get("/", (req, res) => {
@@ -23,12 +93,17 @@ const path = require("path");
         });
     });
 
-    server.get("/portfolio", (req, res) => {
-        res.render("portfolio", {
-            title: "Personalizado de ponta a ponta em cada projeto"
-        });
-    });
+    server.get("/portfolio/:tipo?", (req, res) => {
+        if (!req.params.tipo) {
+            renderPortfolio(res);
+            return;
+        }
 
+        if (tiposPortfolio[req.params.tipo]) {
+            tiposPortfolio[req.params.tipo](res);
+        }
+    });
+    
     server.get("/sobre", (req, res) => {
         res.render("sobre", {
             title: "Projetando e conectando ideias é a nossa essência"
@@ -41,38 +116,14 @@ const path = require("path");
         });
     });
 
-    server.get("/servicos", (req, res) => {
-        res.render("servicos", {
-            title: "A melhor solução pra você",
-            headerClass: 'white-header'
-        });
-    });
+    server.get("/servicos/:tipo?", (req, res) => {
+        if (!req.params.tipo) {
+            renderServicos(res);
+            return;
+        }
 
-    server.get("/servicos/:tipo", (req, res) => {
-        switch (req.params.tipo) {
-            case "branding":
-                res.render("branding", {
-                    title: "A construção e gestão da marca da sua empresa",
-                    brandingActive: true
-                });
-            case "web-development":
-                res.render("webdevelopment", {
-                    title: "Marque presença na web agora mesmo",
-                    webdevelopmentActive: true
-                });
-                break;
-            case "sistemas-web":
-                res.render("sistemasweb", {
-                    title: "Funcionais e otimizados com a sua necessidade",
-                    webdevelopmentActive: true
-                });
-                break;
-            case "digital-strategy":
-                res.render("digitalstrategy", {
-                    title: "Alinhando propósito a estratégia certa",
-                    webdevelopmentActive: true
-                });
-                break;
+        if (tiposServicos[req.params.tipo]) {
+            tiposServicos[req.params.tipo](res);
         }
     });
 
