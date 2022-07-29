@@ -42,8 +42,7 @@ const path = require("path");
 
     function renderServicos(res) {
         res.render("servicos", {
-            title: "A melhor solução pra você",
-            headerClass: 'white-header'
+            title: "A melhor solução pra você"
         });
     }
     function renderServicosBranding(res) {
@@ -89,7 +88,6 @@ const path = require("path");
     server.get("/", (req, res) => {
         res.render("index", {
             title: "Além do desenvolvimento, uma experiência em design",
-            headerClass: 'white-header'
         });
     });
 
@@ -135,7 +133,6 @@ const path = require("path");
 
     server.use((req, res) => {
         res.status(404).render("404", {
-            title: "404",
-            headerClass: 'white-header'
+            title: "404"
         });
     });

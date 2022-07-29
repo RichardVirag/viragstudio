@@ -306,13 +306,23 @@ figure.right-figure {
 /* Header */
 
 header {
-  margin: 20px 0;
-  position: absolute;
+  padding: 20px 0;
+  position: fixed;
+  background: #fff;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100vw;
   max-width:100%;
-  z-index: 1;
+  transition: .25s ease-in-out;
+}
+
+header.scroll {
+  top: -102px;
+}
+
+header.fixed {
+  top: 0;
 }
 
 .logo {
@@ -406,31 +416,6 @@ header ul li a:hover {
   transition: .4s ease-in-out;
 }
 
-.white-header .logo svg {
-  fill: #fff;
-}
-
-.white-header ul li a {
-  color: #fff;
-}
-
-.white-header .start-project-btn a {
-  border: 1px solid #888;
-}
-
-.white-header .start-project-btn a:hover {
-  border: 1px solid #ff7a4d;
-}
-
-.white-header .arrow {
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-}
-
-.white-header .arrow:before {
-  border-right: 1px solid #fff;
-}
-
 /* Footer */
 
 footer .cut-triangle {
@@ -477,7 +462,7 @@ footer .cut-triangle {
 
 .top-index {
   background: url(../img/index-bg.png), #20202f;
-  height: 78vh;
+  height: 84vh;
   position: relative;
   padding: 100px 0 120px;
   background-repeat: no-repeat;
